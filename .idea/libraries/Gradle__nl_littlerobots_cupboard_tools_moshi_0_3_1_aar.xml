@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: nl.littlerobots.cupboard-tools:moshi:0.3.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/554688e8aa9ce53f2cd17e8ca4fe86cc/jetified-moshi-0.3.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2149c6924f4a7521505ca6c97e89e2d/jetified-moshi-0.3.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dfe529d6ff294b4ba19d94b98a2f8566/transformed/jetified-moshi-0.3.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dfe529d6ff294b4ba19d94b98a2f8566/transformed/jetified-moshi-0.3.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/dfe529d6ff294b4ba19d94b98a2f8566/transformed/jetified-moshi-0.3.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/nl.littlerobots.cupboard-tools/moshi/0.3.1/cebfa14f799d02abe813b889e6555017e24e7074/moshi-0.3.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/nl.littlerobots.cupboard-tools/moshi/0.3.1/f41539e3dc87e0807524ebc32c4cba059502bd0d/moshi-0.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

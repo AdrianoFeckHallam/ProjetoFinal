@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.apollographql.android:converter:0.2.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.apollographql.android/converter/0.2.1/69f9966fdcc7aac7cba41b42bd77f31baa2d7c1c/converter-0.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.apollographql.android/converter/0.2.1/aad5afd8264b57c62cde6d53568a04483ed81ad7/converter-0.2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.apollographql.android/converter/0.2.1/5c42267ba43410f822fcaf63d4210e937cdd65b7/converter-0.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: at.stefangeyer.challonge.rest:retrofit:2.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/at.stefangeyer.challonge.rest/retrofit/2.1.0/ffd705cfffd447da6bae29d2b90ae0ed4ec72adf/retrofit-2.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/at.stefangeyer.challonge.rest/retrofit/2.1.0/f87dd32ece34ce8530841c49280aad8570f2af8d/retrofit-2.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/at.stefangeyer.challonge.rest/retrofit/2.1.0/7b9f12ebd2269692ae72289264a621a290ff82ea/retrofit-2.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "630683244398",
+    "firebase_url": "https://uniflix-f14a5.firebaseio.com",
+    "project_id": "uniflix-f14a5",
+    "storage_bucket": "uniflix-f14a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630683244398:android:4b2715106e97ecfc06137f",
+        "android_client_info": {
+          "package_name": "com.example.meuApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630683244398-duaq8cetsclr2b97mue3sos55ado4snj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8RLW66ucJgrVnEJ7TPb7fzN45XiOpU9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630683244398-duaq8cetsclr2b97mue3sos55ado4snj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630683244398:android:2596fa81edf3c23a06137f",
+        "android_client_info": {
+          "package_name": "com.example.meuapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630683244398-3s1mv8odk96fp9oatnk3nkns5pg99g19.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.meuapp",
+            "certificate_hash": "eb4aeb9cb6d1b00e7d21ce9b79ca710e1ff30664"
+          }
+        },
+        {
+          "client_id": "630683244398-duaq8cetsclr2b97mue3sos55ado4snj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8RLW66ucJgrVnEJ7TPb7fzN45XiOpU9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630683244398-duaq8cetsclr2b97mue3sos55ado4snj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

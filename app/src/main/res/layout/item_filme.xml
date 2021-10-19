@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <layout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name= "filme"
+            type="com.example.meuapp.data.model.Filme" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp">
+
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="300dp">
+
+
+
+            <TextView
+                android:id="@+id/txt_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="@{filme.idFilme}" />
+
+            <ImageView
+                android:id="@+id/poster_filme"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="220dp"
+                android:scaleType="fitXY"
+                 />
+
+
+
+
+            <TextView
+                android:id="@+id/txt_titulo_filme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/poster_filme"
+                android:layout_centerHorizontal="true"
+                android:padding="16dp"
+                android:textAlignment="center"
+                tools:text="@{filme.titulo}" />
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="250dp"
+                android:clickable="true"
+                android:linksClickable="true"
+                android:onClick="Share"
+                android:padding="16dp"
+                android:textAlignment="inherit"
+                app:srcCompat="@drawable/icons8_partilhar_24" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout >

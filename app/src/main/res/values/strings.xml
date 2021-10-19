@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">meuApp</string>
+    <string name="nomeApp">UNIFLIX</string>
+    <string name="placeholder_email">E-mail</string>
+    <string name="placeholder_senha">Senha</string>
+    <string name="placeholder_senhanov">Senha Novamente</string>
+    <string name="placeholder_usuario">Usuário</string>
+    <string name="textview_usuario">Usuário</string>
+    <string name="textview_email">E-mail</string>
+    <string name="textview_senha">Senha</string>
+    <string name="textview_senhanov">Repita a senha</string>
+    <string name="button_cadastrar">CADASTRAR</string>
+    <string name="button_face">Log in With Facebook</string>
+    <string name="button_google">Log in With Google</string>
+    <string name="nomePerfil">Perfil 1</string>
+    <string name="nomePerfil2">Perfil 2</string>
+    <string name="nomePerfil3">Perfil 3</string>
+    <string name="nomePerfil4">Perfil 4</string>
+    <string name="title_activity_register">register</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="server_client_id">YOUR_SERVER_CLIENT_ID</string>
+</resources>

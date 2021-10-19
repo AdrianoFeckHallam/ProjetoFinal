@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: at.stefangeyer.challonge:core:2.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/at.stefangeyer.challonge/core/2.1.0/4e82c516ee316d116513f4e0215f3cf38ccc3ebd/core-2.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/at.stefangeyer.challonge/core/2.1.0/fce87d674f7e4a5e0a856c917445ef8f207e1286/core-2.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/at.stefangeyer.challonge/core/2.1.0/384bb32e9e7a0798e32e7b66140602e507d81915/core-2.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
