@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="409dp"
 
-        android:layout_height="729dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,36 +17,31 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:background="#393636">
 
-        android:layout_height="732dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:background="#000000">
 
         <LinearLayout
             android:id="@+id/topmain"
             android:layout_width="match_parent"
-            android:layout_height="87dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="#393636"
+            android:gravity="top"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnMenu"
-                android:layout_width="40dp"
-                android:layout_height="43dp"
-                android:layout_gravity="right"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
                 android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/abc_vector_test"
                 android:clickable="true"
                 android:onClick="retorna"
 
                 android:paddingTop="15dp"
-                android:textColor="#CFCFCF" />
+                android:textColor="#CFCFCF"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:focusable="true" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -65,13 +60,13 @@
 
             <SearchView
                 android:id="@+id/btnSearch"
-                android:layout_width="51dp"
-                android:layout_height="47dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/account_circle_white_18dp"
-                android:gravity="left"
+                android:gravity="start"
                 android:paddingTop="10dp"
                 android:visibility="visible"
                 tools:visibility="visible">
@@ -80,51 +75,84 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/txt_nome_filme"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:text="nome_Filme"
-            android:textColor="#FFFFFF"
-            android:textColorHighlight="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-            android:textColorLink="#FFFFFF"
-            android:textSize="36sp" />
-
-        <LinearLayout
+        <ScrollView
+            android:id="@+id/movie_infos_scroll"
             android:layout_width="match_parent"
-            android:layout_height="360dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/img_poster_filme"
+            <LinearLayout
+                android:id="@+id/movie_infos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                tools:srcCompat="@tools:sample/backgrounds/scenic"
-                android:contentDescription="TODO" />
-        </LinearLayout>
+                android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/linear_post_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txt_descricao_filme"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="descricao_Filme_descricao_Filme_descricao_Filme_descricao_Filme_descricao_Filme_descricao_Filme_descricao_Filme_descricao_Filme_descricao_Filme_descricao_Filme"
-                android:textColor="#FFFDFD"
-                android:textColorHighlight="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textColorLink="#FFFFFF"
-                android:textSize="24sp" />
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/txt_nome_filme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="45dp"
+                        android:text="@string/movie_name"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textColorHighlight="#FFFFFF"
+                        android:textColorHint="#FFFFFF"
+                        android:textColorLink="#FFFFFF"
+                        android:textSize="36sp" />
+
+                    <ImageView
+                        android:id="@+id/img_poster_filme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@string/movie_poster"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="45dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_descricao_filme"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/movie_description"
+                        android:textAlignment="textStart"
+                        android:textColor="#FFFDFD"
+                        android:textColorHighlight="#FFFFFF"
+                        android:textColorHint="#FFFFFF"
+                        android:textColorLink="#FFFFFF"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/txt_genders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/movie_genders"
+                        android:textAlignment="textStart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        tools:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 

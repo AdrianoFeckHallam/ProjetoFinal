@@ -1,6 +1,8 @@
 package com.example.meuapp.data.connection.response;
 
+import com.example.meuapp.data.model.Generos;
 import com.squareup.moshi.Json;
+import java.util.List;
 
 public class FilmeResponse {
 
@@ -13,14 +15,19 @@ public class FilmeResponse {
     private final String idFilme;
 
 
-    @Json(name="description")
+    @Json(name="overview")
     private final String descricao;
 
-    public FilmeResponse(String caminhoPoster, String tituloFilme, String idFilme, String descricao) {
+    @Json(name="genres.name")
+    private final String generos;
+
+
+    public FilmeResponse(String caminhoPoster, String tituloFilme, String idFilme, String descricao, String generos) {
         this.caminhoPoster = caminhoPoster;
         this.tituloFilme = tituloFilme;
         this.idFilme = idFilme;
         this.descricao = descricao;
+        this.generos = generos;
     }
 
     public String getCaminhoPoster() {
@@ -33,6 +40,9 @@ public class FilmeResponse {
     public String getIdFilme(){return idFilme;}
     public String getDescricao() {
         return descricao;
+    }
+    public String getGeneros() {
+        return generos;
     }
 
 }

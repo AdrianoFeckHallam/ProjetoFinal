@@ -34,6 +34,7 @@ import com.example.meuapp.data.connection.ApiService;
 import com.example.meuapp.data.connection.response.FilmesResult;
 import com.example.meuapp.data.mapper.FilmeMapper;
 import com.example.meuapp.data.model.Filme;
+import com.example.meuapp.data.model.Generos;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -117,6 +118,9 @@ public class ListaFilmesActivity extends AppCompatActivity implements SensorEven
                     @Override
                     public void onResponse(@NotNull Call<FilmesResult> call, @NotNull Response<FilmesResult> response) {
                         if (response.isSuccessful()) {
+                            Log.d("ListaFilmesActivity", "onResponse: Server Response: " + response.toString());
+                            Log.d("ListaFilmesActivity", "onResponse: Received Info: " + response.body().getResultados().toString());
+
                             final List<Filme> listaFilmes = FilmeMapper
                                     .responseToDomain(response.body().getResultados());
                             FilmeAdapter1.setFilmes(listaFilmes);;
@@ -160,6 +164,7 @@ public class ListaFilmesActivity extends AppCompatActivity implements SensorEven
                     @Override
                     public void onResponse(@NotNull Call<FilmesResult> call, @NotNull Response<FilmesResult> response) {
                         if (response.isSuccessful()) {
+                            Log.d("ListaFilmesActivity", "GENERO: " + response.body().getResultados().toArray());
                             final List<Filme> listaFilmes = FilmeMapper
                                     .responseToDomain(response.body().getResultados());
 
