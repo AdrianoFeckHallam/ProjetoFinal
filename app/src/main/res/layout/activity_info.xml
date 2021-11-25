@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#393636">
+    android:background="#1B1B1B">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -15,65 +15,67 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:background="#393636">
+        tools:background="#1B1B1B">
 
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/topmain"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_marginTop="10dp"
-            android:background="#393636"
-            android:gravity="top"
-            android:orientation="horizontal">
+            android:background="#00000000"
+            android:gravity="top">
 
             <Button
                 android:id="@+id/btnMenu"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_gravity="end"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+
                 android:background="@drawable/abc_vector_test"
                 android:clickable="true"
+                android:focusable="true"
                 android:onClick="retorna"
-
                 android:paddingTop="15dp"
                 android:textColor="#CFCFCF"
-                tools:ignore="SpeakableTextPresentCheck"
-                android:focusable="true" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/logo_uniflix_search2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:gravity="center_horizontal"
-                android:text="@string/nomeApp"
-                android:textAllCaps="false"
-                android:textColor="@color/titulo_color"
-                android:textColorHighlight="#000000"
-                android:textColorHint="#ffffff"
-                android:textColorLink="#FFFFFF"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/logo_uniflix_search2"
+                android:layout_width="262dp"
+                android:layout_height="52dp"
+                android:contentDescription="@string/logo_uniflix"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/logo_uniflix_no_shadow" />
 
-            <SearchView
+            <androidx.appcompat.widget.SearchView
                 android:id="@+id/btnSearch"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="15dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/account_circle_white_18dp"
                 android:gravity="start"
                 android:paddingTop="10dp"
                 android:visibility="visible"
+                app:iconifiedByDefault="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/logo_uniflix_search2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:searchIcon="@null"
                 tools:visibility="visible">
 
-            </SearchView>
+            </androidx.appcompat.widget.SearchView>
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ScrollView
             android:id="@+id/movie_infos_scroll"
@@ -86,70 +88,194 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/linear_post_image"
                     android:layout_width="match_parent"
-                    android:layout_height="360dp"
-                    android:orientation="vertical">
+                    android:layout_height="290dp">
+
+                    <ImageView
+                        android:id="@+id/img_background_filme"
+                        android:layout_width="414dp"
+                        android:layout_height="278dp"
+                        android:contentDescription="@string/movie_poster"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="#323232"
+                        app:tintMode="multiply"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
                     <TextView
                         android:id="@+id/txt_nome_filme"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="45dp"
+                        android:layout_width="213dp"
+                        android:layout_height="107dp"
                         android:text="@string/movie_name"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
                         android:textColorHighlight="#FFFFFF"
                         android:textColorHint="#FFFFFF"
                         android:textColorLink="#FFFFFF"
-                        android:textSize="36sp" />
-
-                    <ImageView
-                        android:id="@+id/img_poster_filme"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:contentDescription="@string/movie_poster"
-                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/linear_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="45dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/txt_descricao_filme"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:text="@string/movie_description"
-                        android:textAlignment="textStart"
-                        android:textColor="#FFFDFD"
-                        android:textColorHighlight="#FFFFFF"
-                        android:textColorHint="#FFFFFF"
-                        android:textColorLink="#FFFFFF"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.919"
+                        app:layout_constraintStart_toStartOf="@+id/img_background_filme"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.315" />
 
                     <TextView
                         android:id="@+id/txt_genders"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_width="229dp"
+                        android:layout_height="71dp"
                         android:text="@string/movie_genders"
-                        android:textAlignment="textStart"
+                        android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.681"
+                        app:layout_constraintStart_toEndOf="@+id/cardView"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_nome_filme"
+                        app:layout_constraintVertical_bias="0.297"
+                        tools:layout_conversion_absoluteHeight="27dp"
+                        tools:layout_conversion_absoluteWidth="389dp"
                         tools:visibility="visible" />
 
-                </LinearLayout>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="141dp"
+                        android:layout_height="202dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/txt_nome_filme"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/img_poster_filme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_corner"
+                            android:contentDescription="@string/movie_poster"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.068"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/img_background_filme"
+                            app:layout_constraintVertical_bias="0.533"
+                            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/description_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:cardBackgroundColor="#232323"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_nome_filme"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/linear_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_sinopse"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/movie_overview"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_descricao_filme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="@string/movie_description"
+                            android:textAlignment="textStart"
+                            android:textColor="#FFFDFD"
+                            android:textColorHighlight="#FFFFFF"
+                            android:textColorHint="#FFFFFF"
+                            android:textColorLink="#FFFFFF"
+                            android:textSize="16sp"
+                            tools:layout_conversion_absoluteHeight="32dp"
+                            tools:layout_conversion_absoluteWidth="389dp"
+                            tools:layout_editor_absoluteX="11dp"
+                            tools:layout_editor_absoluteY="453dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/trailer_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    app:cardBackgroundColor="#232323"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_nome_filme"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/linear_videos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_trailer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/movie_trailer"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                            android:id="@+id/player_trailer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="15dp"
+                            app:autoPlay="false"
+                            app:enableAutomaticInitialization="true"
+                            app:showFullScreenButton="true"
+                            app:showYouTubeButton="false"
+                            app:useWebUi="true" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
         </ScrollView>

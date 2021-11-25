@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:background="#393636"
+    android:background="#1B1B1B"
     android:clickable="true"
     android:focusable="true"
     android:theme="@style/Theme.AppCompat.NoActionBar"
@@ -25,60 +25,64 @@
             android:id="@+id/layout_linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#393636"
+            android:background="#1B1B1B"
             android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/topmain"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
-                android:background="#393636"
+                android:background="#1B1B1B"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btnMenu"
-                    android:layout_width="40dp"
-                    android:layout_height="43dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:background="@android:drawable/ic_menu_sort_by_size"
                     android:paddingTop="15dp"
-                    android:textColor="#CFCFCF" />
+                    android:textColor="#CFCFCF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/logo_uniflix_search"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="90dp"
-                    android:text="UNIFLIX"
-                    android:textColor="@color/titulo_color"
-                    android:textColorHighlight="#000000"
-                    android:textColorHint="#000000"
-                    android:textColorLink="#000000"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/logo_uniflix_search"
+                    android:layout_width="262dp"
+                    android:layout_height="52dp"
+                    android:contentDescription="@string/logo_uniflix"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/logo_uniflix_no_shadow" />
 
-                <SearchView
+                <androidx.appcompat.widget.SearchView
                     android:id="@+id/btnSearch"
-                    android:layout_width="51dp"
-                    android:layout_height="47dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="90dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:gravity="end"
                     android:paddingTop="10dp"
                     android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.384"
+                    app:layout_constraintStart_toEndOf="@+id/logo_uniflix_search"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:visibility="visible">
 
-                </SearchView>
+                </androidx.appcompat.widget.SearchView>
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#393636"
+                android:background="#1B1B1B"
                 android:orientation="vertical">
 
                 <TextView

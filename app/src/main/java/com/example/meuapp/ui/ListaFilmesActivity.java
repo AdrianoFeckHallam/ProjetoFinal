@@ -119,7 +119,7 @@ public class ListaFilmesActivity extends AppCompatActivity implements SensorEven
                     public void onResponse(@NotNull Call<FilmesResult> call, @NotNull Response<FilmesResult> response) {
                         if (response.isSuccessful()) {
                             Log.d("ListaFilmesActivity", "onResponse: Server Response: " + response.toString());
-                            Log.d("ListaFilmesActivity", "onResponse: Received Info: " + response.body().getResultados().toString());
+                            Log.d("ListaFilmesActivity", "onResponse: Received Info: " + response.body().getResultados().get(1).getTituloFilme() + "  generos: " + response.body().getResultados().get(1).getGeneros_Id());
 
                             final List<Filme> listaFilmes = FilmeMapper
                                     .responseToDomain(response.body().getResultados());
@@ -164,7 +164,7 @@ public class ListaFilmesActivity extends AppCompatActivity implements SensorEven
                     @Override
                     public void onResponse(@NotNull Call<FilmesResult> call, @NotNull Response<FilmesResult> response) {
                         if (response.isSuccessful()) {
-                            Log.d("ListaFilmesActivity", "GENERO: " + response.body().getResultados().toArray());
+                            Log.d("ListaFilmesActivity", "GENERO: " + response.body().getResultados().get(1).getGeneros_Id());
                             final List<Filme> listaFilmes = FilmeMapper
                                     .responseToDomain(response.body().getResultados());
 
@@ -178,7 +178,7 @@ public class ListaFilmesActivity extends AppCompatActivity implements SensorEven
 
                     @Override
                     public void onFailure(@NotNull Call<FilmesResult> call, Throwable t) {
-                        mostraErro();
+                        Toast.makeText(ListaFilmesActivity.this, "Falha na comunicaçao da api: " + t.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
 

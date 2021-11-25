@@ -31,4 +31,8 @@
     <string name="movie_genders">Gêneros</string>
     <string name="movie_description">Descrição do Filme</string>
     <string name="movie_poster">Poster do Filme</string>
+    <string name="movie_background">Poster de Fundo do Filme</string>
+    <string name="movie_overview">Sinopse</string>
+    <string name="movie_trailer">Trailer</string>
+    <string name="logo_uniflix">Logo UniFlix</string>
 </resources>

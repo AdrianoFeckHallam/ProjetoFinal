@@ -1,17 +1,19 @@
 package com.example.meuapp.data.model;
 
+import com.squareup.moshi.Json;
+
 public class Generos {
     // Classe model para o array dos generos dos filmes
 
-    private int id;
+    private String id;
     private String name;
 
     // Getters 'n' Setters
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -23,10 +25,11 @@ public class Generos {
         this.name = name;
     }
 
+
     //Constructor
 
 
-    public Generos(int id, String name) {
+    public Generos(String id, String name) {
         this.id = id;
         this.name = name;
     }

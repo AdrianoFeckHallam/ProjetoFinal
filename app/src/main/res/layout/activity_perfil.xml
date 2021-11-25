@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#393636">
+    android:background="#1B1B1B">
 
     <LinearLayout
-        android:layout_width="403dp"
-        android:layout_height="800dp"
-        android:background="#393636"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#1B1B1B"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,19 +22,13 @@
             android:layout_marginTop="100dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="150dp"
-                android:text="UNIFLIX"
-                android:textColor="@color/titulo_color"
-                android:textColorHighlight="#000000"
-                android:textColorHint="#000000"
-                android:textColorLink="#000000"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/logo_uniflix_profile"
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+                android:contentDescription="@string/logo_uniflix"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/logo_uniflix_no_shadow" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -176,14 +170,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginTop="50dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <ImageView
