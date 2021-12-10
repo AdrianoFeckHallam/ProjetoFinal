@@ -55,26 +55,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@mipmap/logo_uniflix_no_shadow" />
 
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/btnSearch"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/account_circle_white_18dp"
-                android:gravity="start"
-                android:paddingTop="10dp"
-                android:visibility="visible"
-                app:iconifiedByDefault="false"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/logo_uniflix_search2"
-                app:layout_constraintTop_toTopOf="parent"
-                app:searchIcon="@null"
-                tools:visibility="visible">
-
-            </androidx.appcompat.widget.SearchView>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ScrollView

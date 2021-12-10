@@ -282,14 +282,11 @@ public class ListaFilmesActivity extends AppCompatActivity implements SensorEven
     private void hideElementsInBar(boolean option){
 
         ImageView img = findViewById(R.id.logo_uniflix_search);
-        Button btn = findViewById(R.id.btnMenu);
 
         if(option == true){
             img.setVisibility(View.INVISIBLE);
-            btn.setVisibility(View.INVISIBLE);
         } else if (option == false){
             img.setVisibility(View.VISIBLE);
-            btn.setVisibility(View.VISIBLE);
         }
 
     }

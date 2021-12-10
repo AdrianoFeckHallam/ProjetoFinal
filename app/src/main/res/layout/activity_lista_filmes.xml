@@ -54,20 +54,6 @@
 
                 </androidx.appcompat.widget.SearchView>
 
-                <Button
-                    android:id="@+id/btnMenu"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="@android:drawable/ic_menu_sort_by_size"
-                    android:paddingTop="15dp"
-                    android:scaleX="-1"
-                    android:textColor="#CFCFCF"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/logo_uniflix_search"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
                 <ImageView
                     android:id="@+id/logo_uniflix_search"
                     android:layout_width="262dp"
