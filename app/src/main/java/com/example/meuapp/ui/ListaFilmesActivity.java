@@ -253,7 +253,7 @@ public class ListaFilmesActivity extends AppCompatActivity implements SensorEven
 
 
         ApiService.getInstance()
-                .SearchFilmes( "799a1f0649735842ab24e00e80ad2b30", "pt-BR", query)
+                .SearchFilmes( "799a1f0649735842ab24e00e80ad2b30", "pt-BR", query, "false")
                 .enqueue(new Callback<FilmesResult>() {
                     @Override
                     public void onResponse(@NotNull Call<FilmesResult> call, @NotNull Response<FilmesResult> response) {

@@ -32,7 +32,7 @@ public interface FilmesSevices {
 
     @GET("search/movie")
     Call<FilmesResult> SearchFilmes(@Query("api_key") String chaveApi, @Query("language") String linguagem,
-                                    @Query("query") String busca);
+                                    @Query("query") String busca, @Query("include_adult") String adulto);
 
     @GET("movie/{id}")
     Call<GenerosResult> Genero(@Path("id") Integer id, @Query("api_key") String chaveApi,
