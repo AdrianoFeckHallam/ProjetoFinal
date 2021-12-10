@@ -36,6 +36,24 @@
                 android:background="#1B1B1B"
                 android:orientation="horizontal">
 
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/btnSearch"
+                    android:layout_width="393dp"
+                    android:layout_height="44dp"
+                    app:iconifiedByDefault="true"
+                    android:gravity="start"
+                    android:paddingTop="10dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.888"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.388"
+                    tools:visibility="visible">
+
+                </androidx.appcompat.widget.SearchView>
+
                 <Button
                     android:id="@+id/btnMenu"
                     android:layout_width="48dp"
@@ -44,8 +62,8 @@
                     android:paddingTop="15dp"
                     android:textColor="#CFCFCF"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/logo_uniflix_search"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/logo_uniflix_search"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck" />
 
@@ -60,22 +78,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@mipmap/logo_uniflix_no_shadow" />
-
-                <androidx.appcompat.widget.SearchView
-                    android:id="@+id/btnSearch"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:gravity="end"
-                    android:paddingTop="10dp"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.384"
-                    app:layout_constraintStart_toEndOf="@+id/logo_uniflix_search"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:visibility="visible">
-
-                </androidx.appcompat.widget.SearchView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

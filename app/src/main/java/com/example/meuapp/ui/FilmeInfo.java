@@ -136,15 +136,6 @@ public class FilmeInfo extends AppCompatActivity {
                 .into(imgFilme);
         Picasso.get().load("https://image.tmdb.org/t/p/original/"+filme.getCaminhoBackground()).into(imgBackgroundFilme);
 
-    //
-        /*new Handler().postDelayed(new Runnable(){
-            @Override
-            public void run(){
-                startActivity(new Intent(getBaseContext(), ListaFilmesActivity.class));
-                finish();
-            }
-        },5000);*/
-
 
     }
 
