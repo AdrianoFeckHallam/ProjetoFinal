@@ -26,4 +26,13 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="server_client_id">YOUR_SERVER_CLIENT_ID</string>
+    <string name="perifil_svg"> SVG do Perfil</string>
+    <string name="movie_name">Nome do Filme</string>
+    <string name="movie_genders">Gêneros</string>
+    <string name="movie_description">Descrição do Filme</string>
+    <string name="movie_poster">Poster do Filme</string>
+    <string name="movie_background">Poster de Fundo do Filme</string>
+    <string name="movie_overview">Sinopse</string>
+    <string name="movie_trailer">Trailer</string>
+    <string name="logo_uniflix">Logo UniFlix</string>
 </resources>

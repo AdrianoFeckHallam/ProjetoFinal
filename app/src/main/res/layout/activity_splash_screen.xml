@@ -5,29 +5,27 @@
     android:id="@+id/splashBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#393636"
+    android:background="#1B1B1B"
     tools:context=".ui.SplashScreen">
 
     <LinearLayout
         android:layout_width="410dp"
         android:layout_height="730dp"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/logo"
-            android:layout_width="184dp"
-            android:layout_height="103dp"
-            android:layout_gravity="clip_horizontal|clip_vertical|center_horizontal|center_vertical"
-            android:layout_marginTop="300dp"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="UNIFLIX"
-            android:textColor="@color/titulo_color"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/logo_uniflix"
+            android:layout_width="410dp"
+            android:layout_height="730dp"
+            android:contentDescription="@string/logo_uniflix"
+            android:scaleType="centerInside"
+            android:textAlignment="center"
+            app:srcCompat="@mipmap/logo_uniflix" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

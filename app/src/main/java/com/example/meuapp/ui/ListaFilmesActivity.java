@@ -1,6 +1,7 @@
 package com.example.meuapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
@@ -25,6 +26,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +36,7 @@ import com.example.meuapp.data.connection.ApiService;
 import com.example.meuapp.data.connection.response.FilmesResult;
 import com.example.meuapp.data.mapper.FilmeMapper;
 import com.example.meuapp.data.model.Filme;
+import com.example.meuapp.data.model.Generos;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -59,6 +62,9 @@ public class ListaFilmesActivity extends AppCompatActivity implements SensorEven
     RecyclerView rv1;
     RecyclerView rv2;
     RecyclerView rv3;
+    TextView tv1;
+    TextView tv2;
+    TextView tv3;
 
 
     @Override
@@ -67,6 +73,36 @@ public class ListaFilmesActivity extends AppCompatActivity implements SensorEven
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_filmes);
 
+
+        SearchView searchView = findViewById(R.id.btnSearch);
+        searchView.setOnSearchClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hideElementsInBar(true);
+            }
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                searchFilmes(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
+        searchView.setOnCloseListener(new SearchView.OnCloseListener() {
+            @Override
+            public boolean onClose() {
+                hideElementsInBar(false);
+                obtemFilmes();
+                return false;
+            }
+        });
 
         obtemFilmes();
 
@@ -111,12 +147,32 @@ public class ListaFilmesActivity extends AppCompatActivity implements SensorEven
     }
 
     private void obtemFilmes() {
+
+        tv1 = findViewById(R.id.titulo_reproduzindo);
+        tv2 = findViewById(R.id.titulo_populares);
+        tv3 = findViewById(R.id.titulo_bem_avaliados);
+
+        rv2 = findViewById(R.id.rv_reproduzindo);
+        rv3 = findViewById(R.id.rv_bem_avaliados);
+
+
+
+        tv2.setText("Populares:");
+        tv1.setVisibility(View.VISIBLE);
+        tv3.setVisibility(View.VISIBLE);
+
+        rv2.setVisibility(View.VISIBLE);
+        rv3.setVisibility(View.VISIBLE);
+
         ApiService.getInstance()
                 .FilmesPopulares( "799a1f0649735842ab24e00e80ad2b30", "pt-BR")
                 .enqueue(new Callback<FilmesResult>() {
                     @Override
                     public void onResponse(@NotNull Call<FilmesResult> call, @NotNull Response<FilmesResult> response) {
                         if (response.isSuccessful()) {
+                            Log.d("ListaFilmesActivity", "onResponse: Server Response: " + response.toString());
+                            Log.d("ListaFilmesActivity", "onResponse: Received Info: " + response.body().getResultados().get(1).getTituloFilme() + "  generos: " + response.body().getResultados().get(1).getGeneros_Id());
+
                             final List<Filme> listaFilmes = FilmeMapper
                                     .responseToDomain(response.body().getResultados());
                             FilmeAdapter1.setFilmes(listaFilmes);;
@@ -160,6 +216,7 @@ public class ListaFilmesActivity extends AppCompatActivity implements SensorEven
                     @Override
                     public void onResponse(@NotNull Call<FilmesResult> call, @NotNull Response<FilmesResult> response) {
                         if (response.isSuccessful()) {
+                            Log.d("ListaFilmesActivity", "GENERO: " + response.body().getResultados().get(1).getGeneros_Id());
                             final List<Filme> listaFilmes = FilmeMapper
                                     .responseToDomain(response.body().getResultados());
 
@@ -173,9 +230,64 @@ public class ListaFilmesActivity extends AppCompatActivity implements SensorEven
 
                     @Override
                     public void onFailure(@NotNull Call<FilmesResult> call, Throwable t) {
+                        Toast.makeText(ListaFilmesActivity.this, "Falha na comunicaçao da api: " + t.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
+
+    }
+
+    private void searchFilmes(String query){
+
+        tv1 = findViewById(R.id.titulo_reproduzindo);
+        tv2 = findViewById(R.id.titulo_populares);
+        tv3 = findViewById(R.id.titulo_bem_avaliados);
+
+        tv2.setText("Resultados");
+        tv1.setVisibility(View.GONE);
+        tv3.setVisibility(View.GONE);
+
+        rv2.setVisibility(View.GONE);
+        rv3.setVisibility(View.GONE);
+
+        RecyclerView.LayoutManager linearLayoutManager1 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+
+
+        ApiService.getInstance()
+                .SearchFilmes( "799a1f0649735842ab24e00e80ad2b30", "pt-BR", query, "false")
+                .enqueue(new Callback<FilmesResult>() {
+                    @Override
+                    public void onResponse(@NotNull Call<FilmesResult> call, @NotNull Response<FilmesResult> response) {
+                        if (response.isSuccessful()) {
+                            Log.d("ListaFilmesActivity", "onResponse: Server Response: " + response.toString());
+                            Log.d("ListaFilmesActivity", "onResponse: Received Info: " + response.body().getResultados().get(1).getTituloFilme() + "  generos: " + response.body().getResultados().get(1).getGeneros_Id());
+
+                            final List<Filme> listaFilmes = FilmeMapper
+                                    .responseToDomain(response.body().getResultados());
+                            FilmeAdapter1.setFilmes(listaFilmes);;
+
+                            rv1.setLayoutManager(linearLayoutManager1);
+                            rv1.setAdapter(FilmeAdapter1);
+                        } else {
+                            mostraErro();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(@NotNull Call<FilmesResult> call, Throwable t) {
                         mostraErro();
                     }
                 });
+    }
+
+    private void hideElementsInBar(boolean option){
+
+        ImageView img = findViewById(R.id.logo_uniflix_search);
+
+        if(option == true){
+            img.setVisibility(View.INVISIBLE);
+        } else if (option == false){
+            img.setVisibility(View.VISIBLE);
+        }
 
     }
 

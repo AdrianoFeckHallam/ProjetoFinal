@@ -7,13 +7,13 @@
     android:layout_height="match_parent"
     android:layout_alignParentEnd="false"
     android:layout_alignParentBottom="true"
-    android:background="#393636"
+    android:background="#1B1B1B"
     tools:context=".ui.LoginActivity">
 
     <LinearLayout
-        android:layout_width="403dp"
-        android:layout_height="851dp"
-        android:background="#393636"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#1B1B1B"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
@@ -30,8 +30,8 @@
                 android:layout_width="100dp"
                 android:layout_height="103dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:contentDescription="perifil_svg"
+                android:layout_marginTop="80dp"
+                android:contentDescription="@string/perifil_svg"
                 app:srcCompat="@drawable/account_circle_white_18dp"
                 tools:ignore="VectorDrawableCompat" />
 

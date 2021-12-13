@@ -2,12 +2,15 @@
   <library name="Gradle: cn.javaf.cq:json:1.0.2">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.javaf.cq/json/1.0.2/deee2043451423bc81e1864fa33ed3344d5834df/json-1.0.2.jar!/" />
+      <root url="jar://$USER_HOME$/caches/modules-2/files-2.1/cn.javaf.cq/json/1.0.2/deee2043451423bc81e1864fa33ed3344d5834df/json-1.0.2.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.javaf.cq/json/1.0.2/de5bb6ed554b800666d566b96785957c30d4d6d1/json-1.0.2-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/caches/modules-2/files-2.1/cn.javaf.cq/json/1.0.2/de5bb6ed554b800666d566b96785957c30d4d6d1/json-1.0.2-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.javaf.cq/json/1.0.2/5dad885921f16c65d7e487777f8b6bfc68a3d1ab/json-1.0.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/caches/modules-2/files-2.1/cn.javaf.cq/json/1.0.2/5dad885921f16c65d7e487777f8b6bfc68a3d1ab/json-1.0.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
